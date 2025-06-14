@@ -1,5 +1,6 @@
 html {
   font-family: sans-serif;
+  font-size: 16px;
 }
 
 /* Your CSS below here */
@@ -11,10 +12,11 @@ div{
     vertical-align: middle;
 
     /* Center the box horizontally.*/
-    
+    margin:0 100px auto;
     /* Center the text witin the box */
     text-align: center;
-    
+    /* font size 17 px = ~1.06 rem, 18px~ 1.125rem*/
+    font-size: 17.6px ;
 }
 
 
