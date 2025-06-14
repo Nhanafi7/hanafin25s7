@@ -1,0 +1,18 @@
+html {
+  font-family: sans-serif;
+}
+
+/* Your CSS below here */
+div{
+    border: 20px solid black;
+    width: 200px;
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+
+    /* Center the box horizontally.*/
+    margin:auto ;
+
+}
+
+
