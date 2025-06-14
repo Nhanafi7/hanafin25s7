@@ -11,8 +11,10 @@ div{
     vertical-align: middle;
 
     /* Center the box horizontally.*/
-    margin:auto ;
-
+    
+    /* Center the text witin the box */
+    text-align: center;
+    
 }
 
 
