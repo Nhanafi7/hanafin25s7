@@ -7,8 +7,6 @@
     -->
 
 */
-
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -54,9 +52,15 @@ h1{       /*Unexpect duplicate selcter"hi", first used at line 12.*/
   */
 ul{
     background-color:#eeeeee ;
-    border:solid spx purple ;
+    border:solid 5px purple ;}
+
+a:link,
+a:visited {
+  color: #fb6542;
 }
 
-a:hover{
-    color: green;
+/* Style link on hover */
+a:hover {
+  color: green;               /* added */
+  text-decoration: none;      /* no underline on hover */
 }
