@@ -62,4 +62,13 @@ body {
   }
   main article img{
     float: left;
+    margin: 10px;
+  }
+  main{
+    display: flex;
+    flex-direction: row;
+  }
+  aside ul {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
   }
