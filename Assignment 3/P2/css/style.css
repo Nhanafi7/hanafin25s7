@@ -5,22 +5,45 @@ html {
 
 /* Your CSS below here */
 div{
-    border: 10px solid black;
   
     width: 200px;
     height: 150px;
-     /* Center the box horizontally.*/
-    margin: 0px auto; /*margin:0px auto;*/
+
+    /* Center the box horizontally.*/ 
+     margin: 0px auto; 
 
     /* Center the text witin the box */ 
-    display:flex ;
+     display:flex ; 
 
-    align-items: center;
+     align-items: center;
     justify-content: center;
-    text-align: center;
-    font-size: 1.1 rem;
+    text-align: center; 
+    /* A slight increase in font size, to areound 17-18*/
+     font-size: 1.5 rem; 
 
    /* color base design background color.*/
-    background-color: #e63946; /* base color: a nice red */
-    color: #fff; /* contrasting text color */
+     background-color: #e63946; /*Base color: a nice red */
+    color: #fff;  /*contrasting text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) ; 
+
+    /* subtle border radius.*/
+     border-radius: 10px; 
+     border: solid 1px red;
+
+     background-image: linear-gradient(
+    to bottom right, 
+    rgba(0, 0, 0, 0), 
+    rgba(0, 0, 0, 0.2) %30,
+    rgba(0, 0, 0, 0.2)
+
+  );
+
+     /* Multiple box shadows.*/
+     box-shadow:inset 2px 2px 4px rgba(255,255,255,0.9),
+      inset -2px -2px 4px rgba(0,0,0,0.9)
+      0px 4px 6px black;
+    
+          
+
 }
+
