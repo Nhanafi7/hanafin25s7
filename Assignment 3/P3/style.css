@@ -1,7 +1,10 @@
 /* General setup */
 /* Load web fonts using bulletproof @font-face code */
 @import url('https://fonts.googleapis.com/css2?family=Arial, Helvetica, sans-serif:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
-
+@font-face {
+  font-family;
+  src: url('https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjxAwXjeu.woff2') format('woff2');
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,13 +15,11 @@ body {
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 10px;   /* font size*/
   line-height: 1.6; /*line to hight*/
-  letter-spacing: 0.2px; ;
-  word-spacing: 0.1px;
-  background-color: #fff;
-  color: 333;
+  letter-spacing: 0.4px; ;
+  word-spacing: 1px;
   
 }
 
@@ -56,18 +57,18 @@ header, footer {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6{
-  font-family: 'Courier New', Courier, monospace;
-  letter-spacing: 0.5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
 
 }
 h1{
-  font-size: 45px;
+  font-size: 2.4rem;
   text-align: center;
-  margin-bottom: 1rem;
+  
 }
 h2{
-  font-size: 30px;
-  margin: 1rem 0 1rem;
+  font-size: 1.8rem;
+  margin: 1.5em;
 }
 /* pragraphs and list*/
 p{
@@ -75,9 +76,50 @@ p{
   margin: bottom 1rem;
  
 }
-section h2 + p{
+section p:first-of-type
+{
   text-indent: 20px;
 }
+
 ul, ol{
   text-indent: 20px;
+}
+a{
+  color:brown;
+  text-decoration:underline;
+  outline: none;
+}
+a:visited{
+  color: red;
+}
+/* External links only (icon added using pseudo-element) */
+a[href^="http"]::after {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/External_link_font_awesome.svg');
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+a:hover,a:focus{
+  color: blueviolet;
+  text-decoration:underline;
+}
+nav ul{
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  width: fit-content;
+}
+li{
+  line-height: 1.6em;
+  list-style-type: square;
+}
+nav li{
+  border: 2px; 
+  margin-bottom: 6px;
+  padding: 10px;
+  main 
+
+
 }
