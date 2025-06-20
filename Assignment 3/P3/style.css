@@ -1,13 +1,20 @@
 /* General setup */
+/* Load web fonts using bulletproof @font-face code */
+@import url('https://fonts.googleapis.com/css2?family=Arial, Helvetica, sans-serif:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  
 }
 
 /* Layout */
