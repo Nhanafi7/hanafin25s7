@@ -1,7 +1,9 @@
 /* General setup */
 /* Load web fonts using bulletproof @font-face code */
-@import url('https://fonts.googleapis.com/css2?family=Arial, Helvetica, sans-serif:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
 @font-face {
+  font-family: 'Merriweather';
+  src: url('https://fonts.gstatic.com/s/merriweather/v28/u-4k0qyriQwlOrhSvowK_l521wRpX837pvjx.woff2') format('woff2');
+
   font-family;
   src: url('https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjxAwXjeu.woff2') format('woff2');
 }
@@ -92,34 +94,51 @@ a{
 a:visited{
   color: red;
 }
+a:hover,a:focus{
+  color: blueviolet;
+  text-decoration:none;
+}
+a:active {
+  color: white;
+  background-color: #a66;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
 /* External links only (icon added using pseudo-element) */
 a[href^="http"]::after {
-  content: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/External_link_font_awesome.svg');
+  content: url link;
   display: inline-block;
   width: 12px;
   height: 12px;
   margin-left: 4px;
   vertical-align: middle;
 }
-a:hover,a:focus{
-  color: blueviolet;
-  text-decoration:underline;
+/* Lists */
+ul, ol {
+  margin: 1em 0;
+  padding-left: 20px;
 }
+
 nav ul{
   list-style: none;
-  padding: 10px;
-  margin: 0;
-  width: fit-content;
-}
-li{
-  line-height: 1.6em;
-  list-style-type: square;
+  padding: 0px;
 }
 nav li{
-  border: 2px; 
-  margin-bottom: 6px;
+  margin-bottom:10px;
+  
+}
+nav a {
+  display: block;
   padding: 10px;
-  main 
-
-
+  background-color:white;
+  text-align: center;
+  border: 1px solid ;
+  text-decoration: none;
+  font-weight: bold;
+  color:red;
+  border-radius: 5px;
+}
+nav a:hover {
+  background-color: white;
+  color:black;
 }
