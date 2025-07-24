@@ -1,12 +1,18 @@
-<h1>Image gallery example</h1>
+const displayedImage = document.querySelector('.displayed-img');
+const thumbBar = document.querySelector('.thumb-bar');
 
-<div class="full-img">
-  <img
-    class="displayed-img"
-    src="images/pic1.jpg"
-    alt="Closeup of a blue human eye" />
-  <div class="overlay"></div>
-  <button class="dark">Darken</button>
-</div>
+const btn = document.querySelector('button');
+const overlay = document.querySelector('.overlay');
 
-<div class="thumb-bar"></div>
+/* Declaring the array of image filenames */
+
+/* Declaring the alternative text for each image file */
+
+/* Looping through images */
+
+const newImage = document.createElement('img');
+newImage.setAttribute('src', xxx);
+newImage.setAttribute('alt', xxx);
+thumbBar.appendChild(newImage);
+
+/* Wiring up the Darken/Lighten button */
