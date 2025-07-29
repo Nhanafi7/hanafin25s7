@@ -1,9 +1,7 @@
 /* General setup */
 /* Load web fonts using bulletproof @font-face code */
+@import url('https://fonts.googleapis.com/css2?family=Arial, Helvetica, sans-serif:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
 @font-face {
-  font-family: 'Merriweather';
-  src: url('https://fonts.gstatic.com/s/merriweather/v28/u-4k0qyriQwlOrhSvowK_l521wRpX837pvjx.woff2') format('woff2');
-
   font-family;
   src: url('https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjxAwXjeu.woff2') format('woff2');
 }
@@ -106,7 +104,7 @@ a:active {
 }
 /* External links only (icon added using pseudo-element) */
 a[href^="http"]::after {
-  content: url link;
+  content: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/External_link_font_awesome.svg');
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -116,16 +114,16 @@ a[href^="http"]::after {
 /* Lists */
 ul, ol {
   margin: 1em 0;
-  padding-left: 20px;
+  padding-left: 40px;
+}
+li{
+  line-height: 4rem;
+  
 }
 
 nav ul{
   list-style: none;
   padding: 0px;
-}
-nav li{
-  margin-bottom:10px;
-  
 }
 nav a {
   display: block;
@@ -137,8 +135,4 @@ nav a {
   font-weight: bold;
   color:red;
   border-radius: 5px;
-}
-nav a:hover {
-  background-color: white;
-  color:black;
 }
