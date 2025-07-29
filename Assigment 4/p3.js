@@ -17,3 +17,14 @@ function random(min, max) {
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
+// ball class
+class Ball {
+  constructor(x, y, velX, velY, color, size) {
+    this.x = x;           // x-coordinate (center of ball)
+    this.y = y;           // y-coordinate
+    this.velX = velX;     // x velocity (movement per frame)
+    this.velY = velY;     // y velocity
+    this.color = color;   // fill color
+    this.size = size;     // radius of the ball
+  }
+  // 
