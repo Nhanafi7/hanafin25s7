@@ -66,4 +66,43 @@ class Ball {
     }
   }
 }
+// ======== 4. CREATE BALLS ========
+
+// Array to hold all ball objects
+const balls = [];
+
+// Create 25 random balls
+while (balls.length < 25) {
+  const size = random(10, 20);
+  const ball = new Ball(
+    random(size, width - size),   // x
+    random(size, height - size),  // y
+    random(-7, 7),                // velX
+    random(-7, 7),                // velY
+    randomRGB(),                  // color
+    size                          // size
+  );
+  balls.push(ball);
+}
+
+// ======== 5. ANIMATION LOOP ========
+
+function loop() {
+  // Draw translucent black over the canvas (creates motion trails)
+  ctx.fillStyle = "rgb(0 0 0 / 25%)";
+  ctx.fillRect(0, 0, width, height);
+
+  // For every ball: draw it, update its position, and check collisions
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
+
+  // Repeat the loop
+  requestAnimationFrame(loop);
+}
+
+// Start the animation
+loop();
 
