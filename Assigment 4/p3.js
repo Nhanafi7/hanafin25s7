@@ -27,4 +27,11 @@ class Ball {
     this.color = color;   // fill color
     this.size = size;     // radius of the ball
   }
-  // 
+  // Draw the ball on the canvas
+  draw() {
+    ctx.beginPath(); // Start drawing a new shape
+    ctx.fillStyle = this.color; // Set fill color
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI); // Draw a circle
+    ctx.fill(); // Fill the circle
+  }
+  
