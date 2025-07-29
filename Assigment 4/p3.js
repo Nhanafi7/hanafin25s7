@@ -34,4 +34,36 @@ class Ball {
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI); // Draw a circle
     ctx.fill(); // Fill the circle
   }
-  
+  // Update ball's position and bounce off edges
+  update() {
+    // Bounce off right or left edge
+    if (this.x + this.size >= width || this.x - this.size <= 0) {
+      this.velX = -this.velX;
+    }
+ // Bounce off bottom or top edge
+    if (this.y + this.size >= height || this.y - this.size <= 0) {
+      this.velY = -this.velY;
+    }
+    // Move the ball
+    this.x += this.velX;
+    this.y += this.velY;
+  }
+   // Detect collision with other balls
+  collisionDetect() {
+    for (const otherBall of balls) {
+      // Don't check against itself
+      if (this !== otherBall) {
+        const dx = this.x - otherBall.x;
+        const dy = this.y - otherBall.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        // If distance between centers is less than sum of radii → collision
+        if (distance < this.size + otherBall.size) {
+          // Change both ball colors on collision
+          this.color = otherBall.color = randomRGB();
+        }
+      }
+    }
+  }
+}
+
