@@ -35,7 +35,7 @@ class Ball {
     this.velY = velY;
     this.color = color;
     this.size = size;
-    this.exists=true;
+    
   }
 
   draw() {
