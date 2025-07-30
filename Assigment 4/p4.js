@@ -5,9 +5,11 @@ const ctx = canvas.getContext("2d");
 
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
+// score counter
+const counter= document.querySelector("P");
 
 // function to generate random number
-
+ 
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -16,6 +18,13 @@ function random(min, max) {
 
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+}
+class shape{
+  constructor(x,y,velx, velY){
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;  
+  }
 }
 
 class Ball {
@@ -26,6 +35,7 @@ class Ball {
     this.velY = velY;
     this.color = color;
     this.size = size;
+    this.exists=true;
   }
 
   draw() {
