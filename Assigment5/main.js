@@ -15,6 +15,13 @@ showHideBtn.onclick = function() {
     commentWrapper.style.display = 'none';
   }
 };
+// Allow keyboard activation with Enter or Space
+showHideBtn.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault(); // Prevent page scroll on Space
+    showHideBtn.click();
+  }
+});
 
 // functionality for adding a new comment via the comments form
 
